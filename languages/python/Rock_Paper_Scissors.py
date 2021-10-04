@@ -35,23 +35,17 @@ else:
   print("You choose\n")
   print(images[user_choose])
   computer_choose=random.randint(0,2)
-  if user_choose==2 and computer_choose==0:
+  #we observed from the given condition larger no. wins against samller no. except in case of rock(0) and scissors(2) -- rock(0) wins
+  #if user chooses rock against scissor or  user_choose is greater than computer he wins
+  if user_choose==0 and computer_choose==2 or user_choose>computer_choose:
+    print("computer choose:")
+    print(images[computer_choose])
+    print("You Won")
+  #if computer chooses rock against scissor or  user_choose is lessthan computer user will lose
+  elif computer_choose==2 and user_choose==0 or computer_choose>user_choose:
     print("computer choose:\n")
     print(images[computer_choose])
-    print("\nYou lose")
-  elif user_choose==0 and computer_choose==2:
-    print("computer choose:\n")
-    print(images[computer_choose])
-    print("\nYou Won")
-  elif computer_choose>user_choose:
-    print("computer choose:\n")
-    print(images[computer_choose])
-    print("\nYou lose")
-  elif user_choose>computer_choose:
-    print("computer choose:\n")
-    print(images[computer_choose])
-    print("\nYou won")
+    print("\nYou lost")
   elif computer_choose==user_choose:
-    print("computer choose:\n")
-    print(images[computer_choose])
-    print("\nIt's a draw")
+    print("It's a draw")
+
