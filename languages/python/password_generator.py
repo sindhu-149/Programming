@@ -1,17 +1,19 @@
 #pypassword generator
 import random
 
+print("welcome to py-password generator\n")
+
 letters= ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 numbers=['0','1','2','3','4','4','6','7','8','9']
 
 symbols=['!','#','$','%','^','&','*','@']
 
-n_letters=int(input("How many number of letters would you like in your passwors?  " ))
+n_letters=int(input("How many number of letters would you like in your passwors? \n" ))
 
-n_numbers=int(input("How many numbers would you like?  "))
+n_numbers=int(input("How many numbers would you like? \n"))
 
-n_symbols=int(input("How many symbols would you like?  "))
+n_symbols=int(input("How many symbols would you like? \n"))
 
 password=""
 
@@ -31,4 +33,4 @@ for i in range(0,n_symbols):
 # join() method syntax: string_name.join(iterable)  //string_name - can be "" (empty) // iterable - like list,tuple,string
 password="".join(random.sample(password,len(password)))
 
-print(password)
+print(f"your password is : {password}")
