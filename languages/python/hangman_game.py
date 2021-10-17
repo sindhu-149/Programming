@@ -23,7 +23,7 @@ for _ in range(length):
 
 end_game=False
 
-# this while loop will run until all blanks get filled
+# this while loop will run until all blanks get filled.
 while not end_game:
   
   guess=input("guess a letter :   ").lower()
@@ -41,7 +41,7 @@ while not end_game:
   #if the gueesed letter is not there in the choosen_word then the player will loose one life
   if guess not in display:
     lives-=1
-    print(f"You guessed {guess},that's not in the word.You lose a life. ")
+    print(f"You guessed {guess},that's not in the word.You lose a life.")
 
 
     # if lives is equal to zero before the player guess the word the game will end and player will lose the game
